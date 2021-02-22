@@ -9,20 +9,28 @@ public class plank_move : MonoBehaviour
     public float speed = 1.5f;
     float step;
 
+    float curr_x_pos;
+    float curr_y_pos;
+
+    public int distance_right = 5;
+    public int distance_left = -5;
+
     float dir;
     void Start()
     {
         step = speed * Time.deltaTime;
         dir = step;
+        curr_x_pos = transform.position.x;
+        curr_y_pos = transform.position.y;
     }
     
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > 5) {
+        if(transform.position.x > curr_x_pos + 4) {
             dir = -step;
         }
-        if(transform.position.x < 1) {
+        if(transform.position.x < curr_x_pos - 1) {
             dir = step;
         }
         transform.Translate(dir, 0, 0);
