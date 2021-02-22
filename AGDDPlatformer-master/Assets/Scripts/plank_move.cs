@@ -27,10 +27,10 @@ public class plank_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x > curr_x_pos + 4) {
+        if(transform.position.x > curr_x_pos + distance_right) {
             dir = -step;
         }
-        if(transform.position.x < curr_x_pos - 1) {
+        if(transform.position.x < curr_x_pos + distance_left) {
             dir = step;
         }
         transform.Translate(dir, 0, 0);

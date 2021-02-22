@@ -120,6 +120,18 @@ namespace AGDDPlatformer
             if(collisionInfo.gameObject.tag == "scarybox") {
                 ResetPlayer();
             }
+            if(collisionInfo.gameObject.tag == "platform") {
+                transform.parent = collisionInfo.gameObject.transform;
+                maxSpeed = 14;
+            }
+        }
+
+        void OnCollisionExit2D(Collision2D collisionInfo)
+        {
+            if(collisionInfo.gameObject.tag == "platform") {
+                transform.parent = GameObject.Find("Base").transform;
+                maxSpeed = 7;
+            }
         }
         
         void OnTriggerEnter2D(Collider2D other)
