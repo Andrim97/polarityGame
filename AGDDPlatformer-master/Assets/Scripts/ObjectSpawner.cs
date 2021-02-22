@@ -11,6 +11,10 @@ public class ObjectSpawner : MonoBehaviour
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 
+    public float up = 4.4f;
+
+    public float down = -4.4f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +30,7 @@ public class ObjectSpawner : MonoBehaviour
             if(obj != null)
             {
                 nextSpawn = Time.time + spawnRate;
-                randomY = Random.Range(-4.4f, 4.4f);
+                randomY = Random.Range(up, down);
                 whereToSpawn = new Vector2(transform.position.x, transform.position.y + randomY);
                 Instantiate(obj, whereToSpawn, Quaternion.identity);
             }
