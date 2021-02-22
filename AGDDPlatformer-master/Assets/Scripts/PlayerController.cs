@@ -121,5 +121,19 @@ namespace AGDDPlatformer
                 ResetPlayer();
             }
         }
+        
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if(other.gameObject.tag == "gravityField") {
+                gravityModifier = gravityModifier / 2;
+            }        
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if(other.gameObject.tag == "gravityField") {
+                gravityModifier = gravityModifier * 2;
+            }  
+        }
     }
 }
