@@ -36,4 +36,10 @@ public class ObjectSpawner : MonoBehaviour
             }
         }
     }
+    void OnDrawGizmosSelected()
+    {
+        // Draws a blue line from this transform to the target
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector3(transform.position.x, transform.position.y + down, transform.position.z),new Vector3(transform.position.x, transform.position.y + up, transform.position.z));
+    }
 }
