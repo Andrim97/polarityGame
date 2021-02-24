@@ -132,7 +132,16 @@ namespace AGDDPlatformer
         void OnCollisionEnter2D(Collision2D collisionInfo)
         {
             if(collisionInfo.gameObject.tag == "scarybox") {
+                if(transform.name == "Player1")
+                {
+                    GameObject.Find("Player2").GetComponent<PlayerController>().ResetPlayer();
+                }
+                else
+                {
+                    GameObject.Find("Player1").GetComponent<PlayerController>().ResetPlayer();
+                }
                 ResetPlayer();
+
             }
         }
         //     if(collisionInfo.gameObject.tag == "platform") {
