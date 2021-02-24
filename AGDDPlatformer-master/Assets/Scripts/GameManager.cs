@@ -59,6 +59,12 @@ namespace AGDDPlatformer
 
         void Update()
         {
+            if (Input.GetButtonDown("Cheat"))
+                {
+                    source.PlayOneShot(winSound);
+                    StartCoroutine(LevelCompleted());
+                }
+
             if (isGameComplete)
             {
                 if (Input.GetButtonDown("Reset"))
