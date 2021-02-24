@@ -129,11 +129,12 @@ namespace AGDDPlatformer
             //Debug.Log(Yo);
         // }
         
-        // void OnCollisionEnter2D(Collision2D collisionInfo)
-        // {
-        //     if(collisionInfo.gameObject.tag == "scarybox") {
-        //         ResetPlayer();
-        //     }
+        void OnCollisionEnter2D(Collision2D collisionInfo)
+        {
+            if(collisionInfo.gameObject.tag == "scarybox") {
+                ResetPlayer();
+            }
+        }
         //     if(collisionInfo.gameObject.tag == "platform") {
         //         //transform.parent = collisionInfo.gameObject.transform;
         //         //maxSpeed = 14;
