@@ -198,6 +198,16 @@ PrefabInstance:
       propertyPath: distance_right
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8832213139474827974, guid: 96fb0dc4ea15b7e4cba0f50daa23c81e,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832213139474827974, guid: 96fb0dc4ea15b7e4cba0f50daa23c81e,
+        type: 3}
+      propertyPath: vertical_move
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96fb0dc4ea15b7e4cba0f50daa23c81e, type: 3}
 --- !u!1001 &976425554
@@ -511,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 4691332086608218244, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.8960114
+      value: 5.633334
       objectReference: {fileID: 0}
     - target: {fileID: 4691332086616792638, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
