@@ -30,7 +30,7 @@ public class plankOtherTry : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //step = speed * Time.deltaTime;
+        // step = speed * Time.deltaTime;
         if(transform.position.x > curr_x_pos + distance_right) {
             dir = -step;
         }

@@ -7,6 +7,8 @@ public class enemyMove : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody2D obj;
 
+    public bool going_right = false;
+
     void Start()
     {
 
