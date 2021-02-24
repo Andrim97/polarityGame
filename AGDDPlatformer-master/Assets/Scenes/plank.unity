@@ -376,6 +376,8 @@ MonoBehaviour:
   speed: 1.5
   distance_right: 5
   distance_left: -5
+  distance_up: 0
+  distance_down: 0
 --- !u!61 &755960148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107017,6 +107019,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1620561548}
     m_Modifications:
+    - target: {fileID: 1413321540711313761, guid: ae03dd53b3de62c4a826ef04f9c09450,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1413321540711313766, guid: ae03dd53b3de62c4a826ef04f9c09450,
         type: 3}
       propertyPath: m_Name

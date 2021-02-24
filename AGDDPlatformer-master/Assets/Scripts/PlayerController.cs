@@ -114,38 +114,90 @@ namespace AGDDPlatformer
 
             velocity = Vector2.zero;
         }
-        
-        void OnCollisionEnter2D(Collision2D collisionInfo)
-        {
-            if(collisionInfo.gameObject.tag == "scarybox") {
-                ResetPlayer();
-            }
-            if(collisionInfo.gameObject.tag == "platform") {
-                transform.parent = collisionInfo.gameObject.transform;
-                maxSpeed = 14;
-            }
-        }
 
-        void OnCollisionExit2D(Collision2D collisionInfo)
-        {
-            if(collisionInfo.gameObject.tag == "platform") {
-                transform.parent = GameObject.Find("Base").transform;
-                maxSpeed = 7;
-            }
-        }
+        // public void PlatformMove (float dir, bool vertical) {
+        //     Debug.Log(dir);
+        //     if(vertical) { 
+        //         transform.Translate(1, 0, 0); 
+        //         Debug.Log(dir); 
+        //         }
+        //     else if(!vertical) { 
+        //         transform.Translate(0, 1, 0);
+        //         Debug.Log(dir); 
+        //         }
+            //var Yo = gameObject.transform.Find("/Base/Player1");
+            //Debug.Log(Yo);
+        // }
+        
+        // void OnCollisionEnter2D(Collision2D collisionInfo)
+        // {
+        //     if(collisionInfo.gameObject.tag == "scarybox") {
+        //         ResetPlayer();
+        //     }
+        //     if(collisionInfo.gameObject.tag == "platform") {
+        //         //transform.parent = collisionInfo.gameObject.transform;
+        //         //maxSpeed = 14;
+        //         var plank = new plankOtherTry();
+        //         float speed = plank.dir;
+        //         bool vertical = plank.vertical_move;
+        //         if(vertical) { transform.Translate(speed, 0, 0); }
+        //         if(!vertical) { transform.Translate(0, speed, 0); }
+        //     }
+        // }
+
+        // void OnCollisionStay2D(Collision2D collisionInfo)
+        // {
+        //     if(collisionInfo.gameObject.tag == "platform") {
+        //         // transform.parent = collisionInfo.gameObject.transform;
+        //         var plank = new plankOtherTry();
+        //         float speed = plank.dir;
+        //         bool vertical = plank.vertical_move;
+        //         Debug.Log(speed);
+        //         if(vertical) { transform.Translate(speed, 0, 0); }
+        //         if(!vertical) { transform.Translate(0, speed, 0); }
+        //     }
+        // }
+        // void OnCollisionExit2D(Collision2D collisionInfo)
+        // {
+        //     if(collisionInfo.gameObject.tag == "platform") {
+        //         //transform.parent = GameObject.Find("Base").transform;
+        //         //maxSpeed = 7;
+        //         transform.Translate(0, 0, 0);
+        //     }
+        // }
         
         void OnTriggerEnter2D(Collider2D other)
         {
             if(other.gameObject.tag == "gravityField") {
                 gravityModifier = gravityModifier / 2;
-            }        
+            }
+            // if(other.gameObject.tag == "platform") { //seta aftur inn ef hitt virkar ekki
+            //     transform.parent = other.gameObject.transform;
+            // }
+            // if(other.gameObject.tag == "Player2") {
+            //     transform.parent = other.gameObject.transform;
+            // }
         }
 
         void OnTriggerExit2D(Collider2D other)
         {
             if(other.gameObject.tag == "gravityField") {
                 gravityModifier = gravityModifier * 2;
-            }  
+            }
+            // if(other.gameObject.tag == "platform") { //seta aftur inn ef hitt virkar ekki
+            //     transform.parent = GameObject.Find("Base").transform;
+            // }
+
+            
+            // if(other.gameObject.tag == "Player2") {
+            //     transform.parent = GameObject.Find("Base").transform;
+            // }
         }
+        // void OnCollisionStay2D(Collision2D collisionInfo)
+        // {
+        //     if(collisionInfo.gameObject.tag == "platform") {
+        //         transform.Translate(0, -1, 0);
+        //     }
+        // }
     }
 }
