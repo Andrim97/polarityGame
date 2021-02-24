@@ -13,10 +13,10 @@ public class plankOtherTry : MonoBehaviour
     float curr_y_pos;
 
     public bool vertical_move = true;
-    public int distance_right = 0;
-    public int distance_left = 0;
-    public int distance_up = 0;
-    public int distance_down = 0;
+    public float distance_right = 0;
+    public float distance_left = 0;
+    public float distance_up = 0;
+    public float distance_down = 0;
 
     public float dir = 0;
     void Start()
